@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TPSIT | Tommaso Rotoloni</title>
+  <meta name="description" content="Approfondimento su TPSIT e l'architettura Client-Server in Android 9.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container nav">
+      <div class="nav-logo">
+        <a href="index.html" style="color: inherit;">Tommaso Rotoloni</a>
+      </div>
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Apri menu">
+        <i class="ph ph-list"></i>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="materie.html" class="active">Materie</a></li>
+        <li><a href="educazione-civica.html">Educazione Civica</a></li>
+        <li><a href="fsl.html">FSL</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <header class="page-header" style="padding: calc(var(--spacing-xl) * 1) 0;">
+    <div class="container">
+      <div style="margin-bottom: var(--spacing-md);"><a href="materie.html" style="color: rgba(255,255,255,0.7);"><i class="ph ph-arrow-left"></i> Torna alle materie</a></div>
+      <h1 class="h1">💻 TPSIT</h1>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container content-article">
+      
+      <p>In TPSIT quest'anno abbiamo studiato come funzionano le applicazioni web e come dialogano i dispositivi tra loro, usando come esempio pratico il sistema operativo <strong>Android 9</strong>. Abbiamo analizzato l'architettura <strong>Client-Server</strong>, cioè il modo in cui il nostro telefono (il Client) fa delle richieste a un server internet per ricevere i dati, sfruttando i protocolli HTTP e HTTPS.</p>
+
+      <p>La parte più interessante è stata vedere come Android 9 gestisce le risorse. Rispetto a un computer, uno smartphone deve stare attentissimo ai consumi: per questo il sistema blocca o limita le applicazioni in background, così da non sprecare la batteria e la memoria RAM. Abbiamo guardato anche il lato sicurezza, scoprendo che questa versione isola le app per evitare che si facciano danni a vicenda e obbliga l'uso di connessioni sicure e cifrate quando si scambiano dati sul web.</p>
+
+      <p>Capire cosa c'è dietro a un sistema operativo come Android mi ha fatto apprezzare l'importanza dell'organizzazione e dell'efficienza. Anche se all'inizio la teoria sembrava complicata, mi è piaciuto molto vedere come si ottimizzano le risorse, un concetto di gestione che mi tornerà sicuramente utile nei miei futuri studi di Economia.</p>
+
+      <img src="immagini/materia-tpsit.jpg" alt="TPSIT" loading="lazy">
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-bottom" style="margin-top: 0; padding-top: var(--spacing-md); border-top: none;">
+      &copy; 2026 Tommaso Rotoloni. Tutti i diritti riservati.
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

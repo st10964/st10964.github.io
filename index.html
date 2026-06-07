@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tommaso Rotoloni | Portfolio ed Esame di Stato</title>
+  <meta name="description" content="Sito personale di Tommaso Rotoloni, studente di Informatica. Percorso di studi, passioni e progetti.">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Phosphor Icons per le icone -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+  <!-- Header & Navigazione -->
+  <header class="header">
+    <div class="container nav">
+      <div class="nav-logo">
+        <a href="index.html" style="color: inherit;">Tommaso Rotoloni</a>
+      </div>
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Apri menu">
+        <i class="ph ph-list"></i>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="materie.html">Materie</a></li>
+        <li><a href="educazione-civica.html">Educazione Civica</a></li>
+        <li><a href="fsl.html">FSL</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. HOME - Hero -->
+    <section id="home" class="hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1 class="h1">Tommaso Rotoloni</h1>
+          <h2 class="h3" style="color: var(--color-secondary);">Studente di Informatica &mdash; IIS "Marconi Pieralisi", Jesi</h2>
+          <p class="text-lead" style="margin-top: var(--spacing-md);">
+            Cinque anni di scuola, le cose che mi appassionano, qualche progetto: ecco quello che ho da raccontare.
+          </p>
+          <div class="hero-buttons">
+            <a href="#chi-sono" class="btn btn-primary">Scopri di più</a>
+            <a href="materie.html" class="btn btn-outline">Le mie materie</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="immagini/home-hero.jpg" alt="Foto di Tommaso Rotoloni" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. CHI SONO -->
+    <section id="chi-sono" class="section" style="background-color: var(--color-surface);">
+      <div class="container">
+        <h2 class="section-title">Chi Sono e il mio Percorso</h2>
+        
+        <div class="about-block" style="text-align: center; max-width: 800px; margin: 0 auto var(--spacing-xl);">
+          <p class="text-lead">
+            Ho 19 anni e vivo a Morro d'Alba. Sono una persona sempre in cerca di nuove sfide e nuove passioni; cerco di mantenere attiva la mia curiosità perché, d'altronde, è ciò che muove il mondo. Inoltre, cerco sempre di farmi trovare disponibile, aiutando chiunque ne abbia bisogno.
+          </p>
+        </div>
+
+        <div class="about-block">
+          <div class="about-text">
+            <h3 class="h3">Il mio bilancio critico (Oltre le righe del codice)</h3>
+            <p>
+              Ho scelto questa scuola spinto da una forte curiosità verso il mondo tech, un interesse nato fin da quando ero bambino, tanto che il computer è stato lo strumento con cui ho mosso i miei primi passi nell'apprendimento e nella scrittura.
+            </p>
+            <p>
+              Nel corso degli anni, però, non sono state sempre rose e fiori. Ho affrontato difficoltà reali con la programmazione pura che mi hanno portato a una maturazione importante: capire che lo sviluppo software e la scrittura di codice non rappresentano realmente ciò che voglio in questo momento per il futuro. Non è però tutto da buttare: il marconi-pieralisi mi ha lasciato un bagaglio inestimabile, insegnandomi come pensare, la logica strutturata, la capacità di analizzare problemi complessi e una solida forma mentis tecnologica.
+            </p>
+          </div>
+          <div class="about-image">
+            <img src="immagini/scuola-marconi.jpg" alt="Scuola IIS Marconi Pieralisi" loading="lazy">
+          </div>
+        </div>
+
+        <div class="about-block">
+          <div class="about-text">
+            <h3 class="h3">Uno sguardo al futuro: Direzione Economia</h3>
+            <p>
+              Finita la maturità, di solito ci si ritrova difronte al vuoto, per la prima volta non ci sarà nessuno a dirti cosa fare, perciò ho cercato di anticipare questo inconvenevole, guardandomi intorno, prima con l'intenzione di trovare un'occupazione, successivamente ho cambiato idea, puntando ancora una volta sullo studio.
+            </p>
+            <p>
+              Infatti, ho deciso di intraprendere una strada nuova dove sfruttare la metodologia analitica della mia scuola: proseguirò gli studi iscrivendomi alla Facoltà di <strong>Economia</strong> presso l'<strong>Università Politecnica delle Marche</strong> in Ancona.
+            </p>
+            <p>
+              Sono convinto che l'unione tra la mentalità tecnica dell'ITIS e gli studi economici sia una combinazione vincente per capire i mercati moderni, dove la gestione dei Big Data, la digitalizzazione e l'analisi dei flussi finanziari e informativi sono ormai colonne portanti di ogni azienda.
+            </p>
+          </div>
+          <div class="about-image">
+            <img src="immagini/univpm-ancona.jpg" alt="Università Politecnica delle Marche" loading="lazy">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. PASSIONI -->
+    <section id="passioni" class="section">
+      <div class="container">
+        <h2 class="section-title">Le mie Passioni</h2>
+        
+        <p class="passioni-intro">
+          Fuori dall'aula e dai laboratori, cerco sempre di mantenere il giusto equilibrio dedicandomi a ciò che mi emoziona, mi mette alla prova e mi permette di staccare la spina:
+        </p>
+
+        <div class="passioni-grid">
+          
+          <!-- Passione 1: Musica -->
+          <div class="passione-card">
+            <div class="passione-card-icon">
+              <i class="ph ph-headphones"></i>
+            </div>
+            <h3 class="h3">Musica</h3>
+            <p style="color: var(--color-secondary);">
+              Durante la giornata ascolto spesso la musica, mi serve per intrattenermi mentre faccio altre attività, come gameplay, oppure attività fisica individuale, ad esempio durante la corsa. La ascolto anche nei momenti vuoti, dove non ho nulla da fare, ascolto diversi generi musicali, spesso distanti tra di loro, magari un giorno ascolto la musica dei giorni d'oggi, oppure una playlist degli anni '80/'90.
+            </p>
+          </div>
+
+          <!-- Passione 2: Motorsport -->
+          <div class="passione-card">
+            <img src="immagini/passione-motorsport.jpg" alt="Motorsport e F1" loading="lazy">
+            <h3 class="h3">🏎️ Motorsport e Formula 1</h3>
+            <p style="color: var(--color-secondary);">
+              I motori sono una altra mia grande passioni, seguo in particolare fin da piccolo la formula 1, seguendo saltuariamente anche le moto. Non mi limito a seguirli da casa: lo scorso anno ho passato una giornata di puro divertimento e passione all'Autodromo Enzo e Dino Ferrari di Imola, andando a veder correre la Formula 1. Sentire il rombo dei motori dal vivo e vedere questi mostri di ingegneria è qualcosa di stupefacente e unisce perfettamente la mia passione per le corse e la velocità.
+            </p>
+          </div>
+
+          <!-- Passione 3: Calcio -->
+          <div class="passione-card">
+            <img src="immagini/passione-calcio.jpg" alt="Calcio e Sport" loading="lazy">
+            <h3 class="h3">⚽ Il Calcio e lo Sport</h3>
+            <p style="color: var(--color-secondary);">
+              Il calcio rappresenta la mia passione più grande, lo pratico sin da piccolo, fino all'età di 17 anni sono sempre stato legato alla squadra del mio paese, negli ultimi anni invece ho girato altre squadre della zona cercando di migliorare sempre di più. Queste esperienze fuori dalla bolla del mio paesino mi hanno permesso di conoscere nuove persone e sviluppare fiducia in me stesso, ad oggi sono legato alla società sportiva Ostra calcio. Per me il calcio rappresenta un modo di sfogare tutte le pressioni, appena entro all'interno del rettangolo verde, tutti i problemi svaniscono. Lavorare in sintonia con i compagni è una soft skill fondamentale che mi porto dietro anche nella vita.
+            </p>
+          </div>
+
+          <!-- Passione 4: Ping pong -->
+          <div class="passione-card">
+            <div class="passione-card-icon">
+              <i class="ph ph-tennis-ball"></i>
+            </div>
+            <h3 class="h3">Il Ping pong</h3>
+            <p style="color: var(--color-secondary);">
+              Il ping pong è una passione più recente, l'ho scoperto durante l'estate del 2025, all'inizio ero una vera frana, ma con la stessa dedizione che dedico tutti giorni a scuola e calcio, sono migliorato molto, chissà se quest'estate sarà possibile fare qualche torno, misurandomi con persone sicuramente più esperte di me.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-col">
+        <h4>Tommaso Rotoloni</h4>
+        <p style="color: #94A3B8; max-width: 300px;">Sito web personale realizzato per l'Esame di Stato 2025/2026. IIS "Marconi Pieralisi" di Jesi.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigazione</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="materie.html">Materie</a></li>
+          <li><a href="educazione-civica.html">Educazione Civica</a></li>
+          <li><a href="fsl.html">PCTO / FSL</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contatti</h4>
+        <ul>
+          <li><a href="mailto:tommyroto4@gmail.com"><i class="ph ph-envelope-simple"></i> tommyroto4@gmail.com</a></li>
+          <li><a href="https://instagram.com/tommy.roto" target="_blank" rel="noopener"><i class="ph ph-instagram-logo"></i> @tommy.roto</a></li>
+          <li><a href="https://github.com/st10964-example" target="_blank" rel="noopener"><i class="ph ph-github-logo"></i> GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      &copy; 2026 Tommaso Rotoloni. Tutti i diritti riservati.
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
