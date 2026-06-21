@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informatica | Tommaso Rotoloni</title>
+  <meta name="description" content="Approfondimento su Informatica e il progetto Scout Admin.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container nav">
+      <div class="nav-logo">
+        <a href="index.html" style="color: inherit;">Tommaso Rotoloni</a>
+      </div>
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Apri menu">
+        <i class="ph ph-list"></i>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="materie.html" class="active">Materie</a></li>
+        <li><a href="educazione-civica.html">Educazione Civica</a></li>
+        <li><a href="fsl.html">FSL</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <header class="page-header" style="padding: calc(var(--spacing-xl) * 1) 0;">
+    <div class="container">
+      <div style="margin-bottom: var(--spacing-md);"><a href="materie.html" style="color: rgba(255,255,255,0.7);"><i class="ph ph-arrow-left"></i> Torna alle materie</a></div>
+      <h1 class="h1">💻 Informatica</h1>
+      <p class="text-lead" style="color: rgba(255,255,255,0.9);">Materia d'Esame - Approfondita</p>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container content-article">
+      
+      <p>L'Informatica è la materia principale del nostro indirizzo e quest'anno ci ha permesso di lavorare insieme come in una vera azienda tecnologica. Il lavoro più importante che abbiamo fatto in classe è stato lo sviluppo di <strong>Scout Admin</strong>, un'applicazione web gestionale nata per digitalizzare e organizzare tutte le attività, i documenti e i dati logistici di un gruppo Scout.</p>
+
+      <p>Dal punto di vista tecnico, abbiamo progettato la piattaforma dividendo la logica in due parti, secondo il modello Client-Server. Per lo scambio dei dati abbiamo utilizzato i <strong>Webservice REST</strong> che comunicano in formato JSON. Tutta la gestione del backend è stata scritta in <strong>PHP</strong>, mentre per salvare e organizzare le informazioni abbiamo strutturato un database relazionale con <strong>MySQL</strong>, attraverso query e la gestione dei vincoli per non perdere o duplicare i dati. Per non fare confusione lavorando in tanti sullo stesso codice, abbiamo usato <strong>GitHub</strong> e seguito la metodologia <strong>Agile (Scrum)</strong> per dividerci il lavoro.</p>
+
+      <img src="immagini/nuova-informatica.jpg" alt="Scout Admin" loading="lazy">
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-bottom" style="margin-top: 0; padding-top: var(--spacing-md); border-top: none;">
+      &copy; 2026 Tommaso Rotoloni. Tutti i diritti riservati.
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

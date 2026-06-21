@@ -1,0 +1,546 @@
+/* 
+===============================================
+   STILI GLOBALI - SITO PERSONALE TOMMASO
+   TEMA: Tech Minimal
+=============================================== 
+*/
+
+/* --- 1. VARIABILI CSS E FONTS --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700&display=swap');
+
+:root {
+  /* Palette Colori */
+  --color-primary: #1E293B; /* Slate 800 - Testi principali */
+  --color-secondary: #475569; /* Slate 600 - Sottotitoli */
+  --color-accent: #2563EB; /* Blue 600 - CTA e Link */
+  --color-accent-hover: #1D4ED8; /* Blue 700 - Hover state */
+  --color-bg: #F8FAFC; /* Slate 50 - Sfondo pagina */
+  --color-surface: #FFFFFF; /* Sfondo card */
+  --color-border: #E2E8F0; /* Slate 200 - Bordi leggeri */
+
+  /* Tipografia */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Dimensioni e Spaziature */
+  --container-width: 1200px;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+  
+  /* Utilities */
+  --border-radius: 12px;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  --shadow-hover: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+  --transition: all 0.3s ease;
+}
+
+/* --- 2. RESET E BASE --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* Soft scroll per ancore */
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-primary);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 90%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+/* --- 3. TIPOGRAFIA --- */
+.h1 { font-size: 3rem; font-weight: 700; margin-bottom: var(--spacing-sm); }
+.h2 { font-size: 2.25rem; font-weight: 600; margin-bottom: var(--spacing-md); }
+.h3 { font-size: 1.5rem; font-weight: 600; margin-bottom: var(--spacing-sm); }
+.text-lead { font-size: 1.125rem; color: var(--color-secondary); }
+
+/* --- 4. LAYOUT COMPONENTI COMUNI --- */
+.section {
+  padding: var(--spacing-xl) 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--color-accent);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+/* Bottoni */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-body);
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: #fff;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-accent-hover);
+  color: #fff;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-accent);
+  color: #fff;
+}
+
+/* Header & Navigazione */
+.header {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow-sm);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.nav-logo {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-primary);
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+.nav-links a {
+  color: var(--color-secondary);
+  font-weight: 500;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: var(--color-accent);
+}
+
+.mobile-menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  padding: var(--spacing-xl) 0 var(--spacing-lg);
+  margin-top: auto; /* Per sticky footer se necessario */
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
+}
+
+.footer-col h4 {
+  color: var(--color-surface);
+  margin-bottom: var(--spacing-md);
+}
+
+.footer-col ul li {
+  margin-bottom: var(--spacing-sm);
+}
+
+.footer-col a {
+  color: #CBD5E1; /* Slate 300 */
+}
+
+.footer-col a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: var(--spacing-xl);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  color: #94A3B8; /* Slate 400 */
+  font-size: 0.875rem;
+}
+
+/* --- 5. PAGINE SPECIFICHE --- */
+
+/* Hero Section (Home) */
+.hero {
+  padding: calc(var(--spacing-xl) * 1.5) 0;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  display: flex;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  border-radius: 50%;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  box-shadow: var(--shadow-md);
+  border: 4px solid var(--color-surface);
+}
+
+.hero-buttons {
+  margin-top: var(--spacing-lg);
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+/* Chi Sono Section */
+.about-block {
+  display: flex;
+  gap: var(--spacing-xl);
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.about-block:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text p {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-secondary);
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+}
+
+/* Passioni Section */
+.passioni-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto var(--spacing-xl);
+  font-size: 1.125rem;
+  color: var(--color-secondary);
+}
+
+.passioni-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.passione-card {
+  background: var(--color-surface);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.passione-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-5px);
+}
+
+.passione-card-icon {
+  font-size: 2.5rem;
+  color: var(--color-accent);
+  margin-bottom: var(--spacing-md);
+}
+
+.passione-card img {
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-md);
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Materie Hub */
+.materie-group {
+  margin-bottom: var(--spacing-xl);
+}
+
+.materie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.subject-card {
+  background: var(--color-surface);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.subject-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-5px);
+}
+
+.subject-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.subject-card-body {
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.subject-card-body p {
+  color: var(--color-secondary);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-md);
+  flex-grow: 1;
+}
+
+/* Singola Materia / Contenuti Testuali generici */
+.page-header {
+  background: var(--color-primary);
+  color: var(--color-surface);
+  padding: calc(var(--spacing-xl) * 1.5) 0 var(--spacing-xl);
+  text-align: center;
+}
+
+.page-header h1 {
+  color: var(--color-surface);
+}
+
+.content-article {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) 0;
+}
+
+.content-article p {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-secondary);
+  font-size: 1.125rem;
+}
+
+.content-article h2, .content-article h3 {
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+.content-article img {
+  border-radius: var(--border-radius);
+  margin: var(--spacing-lg) 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.content-article blockquote {
+  border-left: 4px solid var(--color-accent);
+  padding-left: var(--spacing-md);
+  margin: var(--spacing-md) 0;
+  font-style: italic;
+  color: var(--color-secondary);
+}
+
+/* Contatti */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  background: var(--color-surface);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-card i {
+  font-size: 2.5rem;
+  color: var(--color-accent);
+  margin-bottom: var(--spacing-sm);
+}
+
+
+/* --- 6. MEDIA QUERIES (Responsive) --- */
+
+@media (max-width: 1024px) {
+  .hero-content {
+    gap: var(--spacing-md);
+  }
+}
+
+@media (max-width: 768px) {
+  /* Tipografia ridotta */
+  .h1 { font-size: 2.5rem; }
+  .h2 { font-size: 2rem; }
+
+  /* Navbar */
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: var(--color-surface);
+    flex-direction: column;
+    padding: var(--spacing-md) 0;
+    box-shadow: var(--shadow-md);
+    gap: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* Nascosto di default */
+    transition: clip-path 0.3s ease-in-out;
+  }
+
+  .nav-links.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .nav-links li {
+    text-align: center;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: var(--spacing-md);
+    color: var(--color-primary);
+  }
+
+  /* Sezioni */
+  .hero-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .about-block, .about-block:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .passioni-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .h1 { font-size: 2rem; }
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-buttons .btn {
+    width: 100%;
+  }
+}
